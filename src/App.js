@@ -10,13 +10,17 @@ import { renderRoutes } from 'react-router-config';
 import { HashRouter } from 'react-router-dom';
 import routes from './routes/index.js';
 
+import { Data } from './application/Singers/data';
+
 function App() {
   return (
     <Provider store={store}>
       <HashRouter>
         <GlobalStyle></GlobalStyle>
         <IconStyle></IconStyle>
-        {renderRoutes(routes)}
+        <Data>
+        { renderRoutes (routes) }
+        </Data>
       </HashRouter>
     </Provider>
   );
